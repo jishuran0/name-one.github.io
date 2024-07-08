@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录页面</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    form {
+      width: 300px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="loginForm">
+    <h2>登录</h2>
+    <input type="text" id="username" placeholder="用户名">
+    <input type="password" id="password" placeholder="密码">
+    <input type="submit" value="登录">
+  </form>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // 在这里模拟登录验证
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === "admin" && password === "123456") {
+        alert("登录成功！");
+      } else {
+        alert("用户名或密码错误！");
+      }
+    });
+  </script>
+</body>
+
+</html>
